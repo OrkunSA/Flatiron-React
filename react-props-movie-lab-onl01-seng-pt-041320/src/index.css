@@ -1,0 +1,88 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+#root {
+  background-image: url("./assets/patterns/cheap_diagonal_fabric.png");
+}
+
+#root, #movie-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#movie-showcase {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 650px;
+  height: 650px;
+}
+
+.movie-card {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.movie-card:hover {
+  transform: scale(1.05)
+}
+
+.movie-card:active {
+  transform: rotateY(180deg) scale(1.05);
+}
+
+
+
+.card-front, .card-back {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  backface-visibility: hidden;
+  background-size: cover;
+}
+
+.card-front {
+  filter: grayscale(100%);
+  transition-duration: 1s;
+  box-shadow: 5px 5px 10px;
+  box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85);
+  
+}
+
+.card-front:hover {
+  filter: grayscale(0%);
+}
+
+.card-back {
+  background-image: url("./assets/patterns/cork-wallet.png");
+  transform: rotateY(180deg);
+  box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+span {
+  border: none;
+  width: 80%;
+  height: 0px;
+  border: 1px solid black;
+  color: #000000;
+}
+
+.zero {
+  background: url("./assets/stars/stars.png") 0 0;
+  width: 148px;
+  height: 33px;
+}
