@@ -1,0 +1,32 @@
+{
+  "name": "react-forms",
+  "version": "0.1.0",
+  "private": true,
+  "babel": {
+    "presets": [
+      "airbnb",
+      "env",
+      "stage-0",
+      "react"
+    ]
+  },
+  "devDependencies": {
+    "react-scripts": "^3.3.0",
+    "webpack": "^4.41.2",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-airbnb": "^2.5.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "dev:hot": "webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./",
+    "eject": "react-scripts eject"
+  }
+}
